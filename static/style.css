@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, Roboto, Arial, sans-serif;
+  background: #0f1115; color: #eee;
+  margin: 0; padding: 16px;
+}
+.container { max-width: 480px; margin: 0 auto; }
+h1 { text-align: center; font-size: 1.5rem; }
+.hint { font-size: 0.85rem; color: #aaa; }
+label { display: block; margin-top: 16px; margin-bottom: 6px; font-weight: bold; }
+textarea, input[type=file] {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #444;
+  background: #1b1e25; color: #eee; font-size: 1rem;
+}
+button, .button-link {
+  display: block; width: 100%; margin-top: 20px; padding: 16px;
+  font-size: 1.1rem; font-weight: bold; border: none; border-radius: 12px;
+  background: #4f7cff; color: #fff; text-align: center; text-decoration: none;
+  cursor: pointer;
+}
+button:disabled { background: #555; }
+.preview { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.preview img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+.status { margin-top: 20px; }
+.progress-bar { background: #2a2d35; border-radius: 8px; overflow: hidden; height: 14px; }
+.progress-fill { background: #4f7cff; height: 100%; width: 0%; transition: width .3s; }
+#statusMsg { text-align: center; margin-top: 8px; font-size: 0.9rem; }
+.error { margin-top: 16px; background: #3a1a1a; color: #ff8080; padding: 12px; border-radius: 8px; }
+.hidden { display: none; }

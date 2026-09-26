@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Narrator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Video Narrator</h1>
+    <p class="hint">Write your script in English. Separate each scene with a <b>blank line</b>. Upload one photo per scene, in the same order.</p>
+
+    <form id="form">
+      <label for="script">Script</label>
+      <textarea id="script" name="script" rows="8" placeholder="Scene 1 text here.
+
+Scene 2 text here.
+
+Scene 3 text here."></textarea>
+
+      <label for="images">Photos (in order, one per scene)</label>
+      <input type="file" id="images" name="images" accept="image/*" multiple capture="environment">
+      <div id="preview" class="preview"></div>
+
+      <button type="submit" id="submitBtn">Generate Video</button>
+    </form>
+
+    <div id="status" class="status hidden">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+      <p id="statusMsg">Starting...</p>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <a id="downloadBtn" class="hidden button-link" href="#">⬇️ Download Video</a>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
